@@ -2,6 +2,8 @@
 
 This package adds team profile photos to jetstream
 
+`Note: Current only supports livewire stack`
+
 ## Installation
 
 You can install the package via composer:
