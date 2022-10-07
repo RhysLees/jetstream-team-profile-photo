@@ -1,6 +1,6 @@
 <?php
 
-namespace RhysLees\JetstreamTeamProfilePhoto\Actions;
+namespace App\Actions\JetstreamTeamProfilePhoto;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;

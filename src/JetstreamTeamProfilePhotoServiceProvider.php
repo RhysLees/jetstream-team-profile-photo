@@ -2,8 +2,9 @@
 
 namespace RhysLees\JetstreamTeamProfilePhoto;
 
+use App\Actions\JetstreamTeamProfilePhoto\UpdateTeamProfileInformation;
 use Livewire\Livewire;
-use RhysLees\JetstreamTeamProfilePhoto\Actions\UpdateTeamProfileInformation;
+use RhysLees\JetstreamTeamProfilePhoto\Commands\InstallCommand;
 use RhysLees\JetstreamTeamProfilePhoto\Contracts\UpdatesTeamProfileInformation;
 use RhysLees\JetstreamTeamProfilePhoto\Http\Livewire\UpdateTeamInformationForm;
 use Spatie\LaravelPackageTools\Package;
@@ -21,6 +22,7 @@ class JetstreamTeamProfilePhotoServiceProvider extends PackageServiceProvider
         $package
             ->name('jetstream-team-profile-photo')
             ->hasViews()
+            ->hasCommand(InstallCommand::class)
             ->hasMigration('add_profile_photo_path_to_teams');
     }
 
