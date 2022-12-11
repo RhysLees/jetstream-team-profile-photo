@@ -12,6 +12,10 @@ You can install the package via composer:
 composer require rhyslees/jetstream-team-profile-photo
 ```
 
+```bash
+php artian teamprofilephoto:install
+```
+
 You can publish and run the migrations with:
 
 ```bash
