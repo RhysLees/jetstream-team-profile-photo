@@ -2,6 +2,10 @@
 
 All notable changes to `jetstream-team-profile-photo` will be documented in this file.
 
+## 2.1.1 - 2022-12-17
+
+**Full Changelog**: https://github.com/RhysLees/jetstream-team-profile-photo/compare/2.1.0...2.1.1
+
 ## 2.1.0 - 2022-12-17
 
 ### What's Changed
