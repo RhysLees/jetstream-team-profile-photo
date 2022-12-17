@@ -61,7 +61,12 @@ class UpdateTeamInformationForm extends Component
         );
 
         if (isset($this->photo)) {
-            return redirect()->route('teams.show', $this->team);
+            $route = config(
+                'jetstream-team-profile-photo.redirect_route.name',
+                'teams.show'
+            );
+
+            return redirect()->route($route, $this->team);
         }
 
         $this->emit('saved');

@@ -29,6 +29,12 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="jetstream-team-profile-photo-views"
 ```
 
+Optionally, you can publish the config using
+
+```bash
+php artisan vendor:publish --tag="jetstream-team-profile-photo-config"
+```
+
 Add the `HasTeamProfilePhotos` trait to your Team model:
 
 ```php

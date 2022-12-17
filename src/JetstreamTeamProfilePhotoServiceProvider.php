@@ -22,6 +22,7 @@ class JetstreamTeamProfilePhotoServiceProvider extends PackageServiceProvider
         $package
             ->name('jetstream-team-profile-photo')
             ->hasViews()
+            ->hasConfigFile()
             ->hasCommand(InstallCommand::class)
             ->hasMigration('add_profile_photo_path_to_teams');
     }
