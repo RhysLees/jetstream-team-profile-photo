@@ -33,14 +33,23 @@ class UpdateTeamInformationForm extends Component
     public $photo;
 
     /**
+     * Optional Route Params
+     *
+     * @var array
+     */
+    public $routeParameters = [];
+
+    /**
      * Prepare the component.
      *
      * @return void
      */
-    public function mount(Team $team)
+    public function mount(Team $team, array $routeParameters = [])
     {
         $this->team = $team;
         $this->state = $team->withoutRelations()->toArray();
+
+        $this->routeParameters = $routeParameters;
     }
 
     /**
@@ -66,7 +75,12 @@ class UpdateTeamInformationForm extends Component
                 'teams.show'
             );
 
-            return redirect()->route($route, $this->team);
+            $routeParameters = array_merge(
+                $this->routeParameters,
+                ['team' => $this->team->id]
+            );
+
+            return redirect()->route($route, $routeParameters);
         }
 
         $this->emit('saved');

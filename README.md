@@ -57,6 +57,22 @@ Modify `resources/views/teams/show.blade.php` as follows:
 + @livewire('jetstream-team-profile-photo::update-team-infomation-form', ['team' => $team])
 ```
 
+## Modifying the redirect route
+
+If you want to change the redirect route after updating the team profile photo, you can publish the config file and change the `redirect_route.name` value.
+
+
+## Adding additional redirect route parameters
+
+If you want to add additional parameters to the redirect route, you can specify them in the `@linvewire` directive as follows:
+
+```diff
+- @livewire('jetstream-team-profile-photo::update-team-infomation-form', ['team' => $team])
++ @livewire('jetstream-team-profile-photo::update-team-infomation-form', ['team' => $team, 'routeParameters' => ['foo' => 'bar']])
+```
+
+For route parameters to be passed to the redirect route, you will need to pass them to the view where you implement the `@livewire('jetstream-team-profile-photo::update-team-infomation-form')` directive.
+
 ## Testing
 
 ```bash
