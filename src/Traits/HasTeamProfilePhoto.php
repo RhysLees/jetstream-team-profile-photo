@@ -11,7 +11,6 @@ trait HasTeamProfilePhoto
     /**
      * Update the team's profile photo.
      *
-     * @param  \Illuminate\Http\UploadedFile  $photo
      * @return void
      */
     public function updateProfilePhoto(UploadedFile $photo)
